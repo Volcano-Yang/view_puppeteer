@@ -14,12 +14,13 @@ async function PagetoJuejinUrl(page, url) {
     "#juejin > div.view-container > main > div > div.main-area.article-area.shadow > article > h1"
   );
 
-  await sleep(3000);
+  //增加浏览量之后要等待一段时间，避免跳转太频繁被制裁
+  await sleep(config.readTime);
 }
 
 module.exports = async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true, //想要展示爬取过程的界面就设置为false
   });
   const page = await browser.newPage();
   await page.setViewport({
