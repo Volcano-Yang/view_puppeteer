@@ -1,0 +1,16 @@
+{
+  "name": "view_juejin_puppeteer",
+  "version": "1.0.0",
+  "description": "给掘金增加浏览量的工具",
+  "main": "app.js",
+  "dependencies": {
+    "puppeteer": "^5.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "volcanoyang",
+  "license": "ISC"
+}
